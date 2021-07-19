@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/lottoFragment"
+        android:name="com.example.lottoeuromillions.lotto.main.LottoFragment"
+        android:label="fragment_lotto"
+        tools:layout="@layout/fragment_lotto" >
+        <action
+            android:id="@+id/action_lottoFragment_to_lottoResultFragment"
+            app:destination="@id/lottoResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/euroFragment"
+        android:name="com.example.lottoeuromillions.euro.main.EuroFragment"
+        android:label="fragment_euro"
+        tools:layout="@layout/fragment_euro" >
+        <action
+            android:id="@+id/action_euroFragment_to_euroResultFragment"
+            app:destination="@id/euroResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.lottoeuromillions.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_lottoFragment"
+            app:destination="@id/lottoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_euroFragment"
+            app:destination="@id/euroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lottoResultFragment"
+        android:name="com.example.lottoeuromillions.lotto.result.LottoResultFragment"
+        android:label="fragment_lotto_result"
+        tools:layout="@layout/fragment_lotto_result" />
+    <fragment
+        android:id="@+id/euroResultFragment"
+        android:name="com.example.lottoeuromillions.euro.result.EuroResultFragment"
+        android:label="fragment_euro_result"
+        tools:layout="@layout/fragment_euro_result" />
+</navigation>
